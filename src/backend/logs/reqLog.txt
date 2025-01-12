@@ -1,0 +1,1 @@
+20241203	15:21:06	fb930801-478a-4f19-a071-699cc5a25314	POST	http://localhost:3000	/create-checkout-session
