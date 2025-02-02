@@ -9,7 +9,7 @@ const handleVerifyCode = (req, res) => {
 
   const emailEntry = Object.keys(verificationCodes).find((email) => {
     const storedCode = verificationCodes[email];
-    return storedCode.code == code;
+    return storedCode.code === code;
   });
 
   if (!emailEntry) {

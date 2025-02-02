@@ -11,53 +11,13 @@ const Checkout = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    const updatedFormData = {
-      ...formData,
-      [name]: value,
-    };
-
-    setFormData(updatedFormData);
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmitAndProceed = async (e) => {
     e.preventDefault();
-
-    const emptyFieldsCheck = Object.values(formData).filter(
-      (value) => value.trim() === ""
-    );
-
-    if (emptyFieldsCheck.length === 0) {
-      if (cartItems.length > 0) {
-        try {
-          const response = await checkoutCart(cartItems);
-          const { url } = response;
-
-          if (url) {
-            window.location.href = url;
-          } else {
-            throw new Error("Failed to retrieve checkout session URL.");
-          }
-        } catch (error) {
-          console.error("Error during checkout:", error);
-          Swal.fire({
-            title: "Checkout Error",
-            text: error.message || "Something went wrong. Please try again.",
-            icon: "error",
-            confirmButtonText: "Try Again",
-            confirmButtonColor: "#14BFEEBF",
-          });
-        }
-      } else {
-        Swal.fire({
-          title: "Cart Is Empty",
-          text: "Please add items to your cart before proceeding to checkout.",
-          icon: "warning",
-          confirmButtonText: "Got It",
-          confirmButtonColor: "#14BFEEBF",
-        });
-      }
-    } else {
+  
+    if (Object.values(formData).some((value) => value.trim() === "")) {
       Swal.fire({
         title: "Incomplete Form",
         text: "Please fill out all fields before proceeding.",
@@ -65,25 +25,50 @@ const Checkout = () => {
         confirmButtonText: "Got It",
         confirmButtonColor: "#14BFEEBF",
       });
+      return;
+    }
+  
+    if (cartItems.length === 0) {
+      Swal.fire({
+        title: "Cart Is Empty",
+        text: "Please add items to your cart before proceeding to checkout.",
+        icon: "warning",
+        confirmButtonText: "Got It",
+        confirmButtonColor: "#14BFEEBF",
+      });
+      return;
+    }
+  
+    try {
+      const response = await checkoutCart(cartItems);
+  
+      if (response.url) {
+        window.location.href = response.url;
+      } else {
+        throw new Error("Failed to retrieve checkout session URL.");
+      }
+    } catch (error) {
+      Swal.fire({
+        title: "Checkout Error",
+        text: error.message || "Something went wrong. Please try again.",
+        icon: "error",
+        confirmButtonText: "Try Again",
+        confirmButtonColor: "#14BFEEBF",
+      });
     }
   };
+  
 
   return (
     <main className="Main__container">
       <p className="Checkout__title">Checkout</p>
-      <form
-        className="Checkout__form_container"
-        onSubmit={handleSubmitAndProceed}
-      >
-        <label htmlFor="checkout" className="offscreen">
-          Checkout
-        </label>
-
+      <form className="Checkout__form_container" onSubmit={handleSubmitAndProceed}>
         <div className="Checkout__section_container">
+          <label htmlFor="fullName" className="offscreen">Full Name</label>
           <input
             type="text"
             name="fullName"
-            id="checkfullname"
+            id="fullName"
             placeholder="Full Name"
             className="Checkout__input"
             required
@@ -94,10 +79,11 @@ const Checkout = () => {
         </div>
 
         <div className="Checkout__section_container">
+          <label htmlFor="phone" className="offscreen">Phone Number</label>
           <input
             type="tel"
             name="phone"
-            id="checkphone"
+            id="phone"
             placeholder="Phone"
             className="Checkout__input"
             required
@@ -108,10 +94,11 @@ const Checkout = () => {
         </div>
 
         <div className="Checkout__section_container">
+          <label htmlFor="email" className="offscreen">Email</label>
           <input
             type="email"
             name="email"
-            id="checkemail"
+            id="email"
             placeholder="E-Mail"
             className="Checkout__input"
             required
@@ -121,30 +108,28 @@ const Checkout = () => {
           />
         </div>
 
-        <div className="Checkout__country_container">
+        <div className="Checkout__section_container">
+          <label htmlFor="country" className="offscreen">Country</label>
           <select
             name="country"
-            id="countries"
+            id="country"
             className="Checkout__countries"
             value={formData.country}
             onChange={handleChange}
             required
           >
             <option value="">Select Country</option>
-            <option value="SE" className="Checkout__country">
-              Sweden
-            </option>
-            <option value="US" className="Checkout__country">
-              America
-            </option>
+            <option value="SE">Sweden</option>
+            <option value="US">America</option>
           </select>
         </div>
 
         <div className="Checkout__section_container">
+          <label htmlFor="address" className="offscreen">Address</label>
           <input
             type="text"
             name="address"
-            id="checkadress"
+            id="address"
             placeholder="Address"
             className="Checkout__input"
             required
@@ -155,10 +140,11 @@ const Checkout = () => {
         </div>
 
         <div className="Checkout__section_container">
+          <label htmlFor="postalNumber" className="offscreen">Postal Number</label>
           <input
             type="number"
             name="postalNumber"
-            id="checkpostnr"
+            id="postalNumber"
             placeholder="Postal Number"
             className="Checkout__input"
             required
@@ -170,13 +156,9 @@ const Checkout = () => {
 
         <div className="Cart__buttons_container">
           <Link to="/cart" className="Link__settings">
-            <button className="Cart__button" type="button">
-              Back to Cart
-            </button>
+            <button className="Cart__button" type="button">Back to Cart</button>
           </Link>
-          <button className="Cart__button" type="submit">
-            Payment
-          </button>
+          <button className="Cart__button" type="submit">Payment</button>
         </div>
       </form>
     </main>

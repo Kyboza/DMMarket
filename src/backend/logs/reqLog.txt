@@ -1,1 +1,13 @@
 20241203	15:21:06	fb930801-478a-4f19-a071-699cc5a25314	POST	http://localhost:3000	/create-checkout-session
+20250202	18:42:21	2ac156d9-5db3-4ffe-9c6d-5e4716330450	POST	http://localhost:3000	/create-checkout-session
+20250202	18:42:31	0742b59b-37a2-4c0a-bd14-9d68691a5c9e	GET	http://localhost:3000	/logout
+20250202	18:44:58	11f6d171-5ac4-44cc-ab35-8f1326d93f5a	POST	http://localhost:3000	/create-checkout-session
+20250202	18:45:13	a415723b-18f0-4a94-8d1e-fa0d74271874	POST	http://localhost:3000	/emailverification
+20250202	18:45:23	64ec77a0-d770-40a8-bc51-c90e4522fecb	POST	http://localhost:3000	/verifycode
+20250202	18:45:37	f961ba92-f601-4ee7-8321-c0b2c6aa7ec7	POST	http://localhost:3000	/verifycode
+20250202	18:45:46	9eed23ed-6a16-4e15-a66d-d49b4d4c18bc	POST	http://localhost:3000	/new-password
+20250202	18:49:08	48e9f3e1-44ad-4d6f-a789-635c3d6be698	POST	http://localhost:3000	/register
+20250202	18:49:18	0626e6a3-25a5-4e06-89f6-a83e893aa50c	POST	http://localhost:3000	/auth
+20250202	18:49:25	814ed27b-db36-494c-ab49-b7948d409ce0	GET	http://localhost:3000	/logout
+20250202	18:52:06	764296e0-db3a-4136-904e-50d9fcc301f3	POST	http://localhost:3000	/auth
+20250202	18:52:25	7328eef9-86e2-4984-bc13-089edc030a3a	GET	http://localhost:3000	/logout

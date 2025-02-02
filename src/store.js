@@ -252,7 +252,7 @@ const storeModel = {
         if (response.data?.url) return { url: response.data.url };
         throw new Error("Invalid response from server");
       } catch (error) {
-        console.error("CheckoutCart Error:", error);
+        console.error("CheckoutCart Error:", error.response?.data || error.message);
         throw error;
       }
     }),

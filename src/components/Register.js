@@ -1,4 +1,6 @@
 import React from "react";
+import Swal from 'sweetalert2';
+import { useNavigate } from "react-router-dom";
 import { FaUser, FaEye } from "react-icons/fa";
 import { useStoreActions, useStoreState } from "easy-peasy";
 
@@ -6,6 +8,7 @@ const Register = () => {
   const username = useStoreState((state) => state.formFields.username);
   const password = useStoreState((state) => state.formFields.password);
   const email = useStoreState((state) => state.formFields.email);
+  const navigate = useNavigate()
 
   const setUsername = useStoreActions(
     (actions) => actions.formFields.setUsername
@@ -24,8 +27,29 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await registerUser({ user: username, email: email, pwd: password });
-    resetFields();
+  
+    try {
+      await registerUser({ user: username, email: email, pwd: password });
+  
+      Swal.fire({
+        title: 'Success!',
+        text: 'You have registered successfully!',
+        icon: 'success',
+        timer: 2000,
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#14BFEEBF",
+      });
+      resetFields();
+      navigate('/')
+    } catch (error) {
+      Swal.fire({
+        title: 'Error!',
+        text: 'There was an issue with your registration. Please try again.',
+        icon: 'error',
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#14BFEEBF",
+      });
+    }
   };
 
   return (
