@@ -47,7 +47,7 @@ function App() {
       <Nav />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/DMMarket/" element={<Home />} />
         <Route path="/sets" element={<SetSelection />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<About />} />

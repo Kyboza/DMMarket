@@ -40,7 +40,7 @@ const Register = () => {
         confirmButtonColor: "#14BFEEBF",
       });
       resetFields();
-      navigate('/')
+      navigate('/DMMarket/')
     } catch (error) {
       Swal.fire({
         title: 'Error!',

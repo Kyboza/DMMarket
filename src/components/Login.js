@@ -46,7 +46,7 @@ const Login = () => {
         timer: 1500,
       });
       setLoggedIn(true);
-      navigate("/");
+      navigate("/DMMarket/");
     } catch (error) {
       await Swal.fire({
         title: "Error logging in",

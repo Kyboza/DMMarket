@@ -177,7 +177,7 @@ const Cart = () => {
       </div>
 
       <div className="Cart__buttons_container">
-        <Link to="/" className="Link__settings">
+        <Link to="/DMMarket/" className="Link__settings">
           <button className="Cart__button">Home</button>
         </Link>
 
