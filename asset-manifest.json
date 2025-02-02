@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DMMarket/static/css/main.3708276e.css",
-    "main.js": "/DMMarket/static/js/main.2080a4ca.js",
+    "main.js": "/DMMarket/static/js/main.d6ef0194.js",
     "static/media/Nature1103x888.png": "/DMMarket/static/media/Nature1103x888.0af979a791f8c9b1c443.png",
     "static/media/Dmmarketlogo1024x1024.png": "/DMMarket/static/media/Dmmarketlogo1024x1024.882db819ed85d4505525.png",
     "static/media/Dark1190x760.png": "/DMMarket/static/media/Dark1190x760.def2b5aa73e02d75c58b.png",
@@ -216,10 +216,10 @@
     "index.html": "/DMMarket/index.html",
     "static/media/DM1Logo20x20.webp": "/DMMarket/static/media/DM1Logo20x20.38d309e3dae5e9cc3437.webp",
     "main.3708276e.css.map": "/DMMarket/static/css/main.3708276e.css.map",
-    "main.2080a4ca.js.map": "/DMMarket/static/js/main.2080a4ca.js.map"
+    "main.d6ef0194.js.map": "/DMMarket/static/js/main.d6ef0194.js.map"
   },
   "entrypoints": [
     "static/css/main.3708276e.css",
-    "static/js/main.2080a4ca.js"
+    "static/js/main.d6ef0194.js"
   ]
 }
