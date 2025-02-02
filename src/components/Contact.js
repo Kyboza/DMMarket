@@ -56,7 +56,7 @@ const Contact = () => {
         confirmButtonText: "Ok",
         confirmButtonColor: "#14BFEEBF",
       });
-      navigate("/");
+      navigate("/DMMarket/");
     } catch (error) {
        await Swal.fire({
           title: "Error",
