@@ -2,6 +2,7 @@ import React from "react";
 import { useStoreActions, useStoreState } from "easy-peasy";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const postName = useStoreState((state) => state.postFunction.postName);
@@ -48,8 +49,22 @@ const Contact = () => {
       setPostAddress("");
       setPostCode("");
       setPostBody("");
+      Swal.fire({
+        title: 'Success!',
+        icon: 'success',
+        timer: 2000,
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#14BFEEBF",
+      });
       navigate("/");
     } catch (error) {
+       Swal.fire({
+          title: "Error",
+          text: error.message || "Something went wrong. Please try again.",
+          icon: "error",
+          confirmButtonText: "Try Again",
+          confirmButtonColor: "#14BFEEBF",
+      });
       console.log("Could not submit post", error);
     }
   };
