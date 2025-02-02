@@ -49,7 +49,7 @@ const Contact = () => {
       setPostAddress("");
       setPostCode("");
       setPostBody("");
-      Swal.fire({
+      await Swal.fire({
         title: 'Success!',
         icon: 'success',
         timer: 2000,
@@ -58,7 +58,7 @@ const Contact = () => {
       });
       navigate("/");
     } catch (error) {
-       Swal.fire({
+       await Swal.fire({
           title: "Error",
           text: error.message || "Something went wrong. Please try again.",
           icon: "error",
@@ -69,14 +69,6 @@ const Contact = () => {
     }
   };
 
-  const handlePostCodeChange = (e) => {
-    const value = e.target.value;
-    if (/^\d{5}$/.test(value)) {
-      setPostCode(value);
-    } else {
-      alert("Please enter a valid postcode");
-    }
-  };
 
   return (
     <main className="Main__container">
@@ -156,7 +148,7 @@ const Contact = () => {
             required
             autoComplete="off"
             value={postCode}
-            onChange={handlePostCodeChange}
+            onChange={(e) => setPostCode(e.target.value)}
           />
         </div>
 
