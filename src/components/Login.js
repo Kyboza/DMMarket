@@ -37,23 +37,26 @@ const Login = () => {
   const handleLogin = async (e) => {
     try {
       e.preventDefault();
-      await loginUser({ user: username, pwd: password });
-      resetFields();
-      await Swal.fire({
-        title: "Log In Successful",
-        icon: "success",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      setLoggedIn(true);
-      navigate("/");
+      const response = await loginUser({ user: username, pwd: password });
+      if(response?.status === 204){
+        await Swal.fire({
+          title: "Log In Successful",
+          icon: "success",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        setLoggedIn(true);
+        navigate("/");
+        resetFields();
+      } else {
+        await Swal.fire({
+          title: "Error logging in",
+          icon: "error",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
     } catch (error) {
-      await Swal.fire({
-        title: "Error logging in",
-        icon: "error",
-        showConfirmButton: false,
-        timer: 1500,
-      });
       console.log(error.message);
     }
   };
