@@ -71,7 +71,7 @@ const Header = () => {
         });
         setLoggedIn(false);
         navigate("/");
-      } else {
+      } else if (!response?.status === 204) {
         Swal.fire({
           title: "Error During Logout",
           icon: "error",

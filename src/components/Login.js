@@ -48,7 +48,7 @@ const Login = () => {
         setLoggedIn(true);
         navigate("/");
         resetFields();
-      } else {
+      } else if (!response?.status === 204) {
         await Swal.fire({
           title: "Error logging in",
           icon: "error",
