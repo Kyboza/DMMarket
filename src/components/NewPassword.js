@@ -91,7 +91,7 @@ const NewPassword = () => {
           confirmButtonColor: "#14BFEEBF",
         });
         resetForm();
-        navigate("/DMMarket/");
+        navigate("/");
       } else {
         Swal.fire({
           title: "Failed to update password",

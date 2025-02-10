@@ -63,7 +63,7 @@ const OrderSuccess = () => {
         </div>
       </div>
       <div className="Cart__buttons_container">
-        <Link to="/DMMarket/" className="Link__settings">
+        <Link to="/" className="Link__settings">
           <button className="Order__button">Home</button>
         </Link>
       </div>

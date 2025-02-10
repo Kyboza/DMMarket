@@ -5,7 +5,7 @@ const Error = () => {
   return (
     <main className="Error__container">
       <p className="Error__title">404 Page Not Found</p>
-      <Link to="/DMMarket/" className="Link__settings">
+      <Link to="/" className="Link__settings">
         <button className="Order__button">Home</button>
       </Link>
     </main>

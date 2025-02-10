@@ -71,7 +71,7 @@ const Nav = () => {
           timer: 1500,
         });
         setLoggedIn(false);
-        navigate("/DMMarket/");
+        navigate("/");
       } else {
         Swal.fire({
           title: "Error During Logout",

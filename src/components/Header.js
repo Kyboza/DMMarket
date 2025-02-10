@@ -117,7 +117,7 @@ const Header = () => {
   return (
     <header className="Header__container">
       <div className="Header__logo_container">
-        <Link to="/DMMarket/" className="Link__settings">
+        <Link to="/" className="Link__settings">
           <img
             src={MainLogo}
             alt="logo"
@@ -129,7 +129,7 @@ const Header = () => {
       </div>
 
       <div className="Header__title_container">
-        <Link to="/DMMarket/" className="Link__settings">
+        <Link to="/" className="Link__settings">
           <h2 className="Header__title">DM Market</h2>
         </Link>
         <p className="Header__desc">The Largest OCG Card Shop</p>
