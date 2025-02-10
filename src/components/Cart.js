@@ -34,17 +34,25 @@ const Cart = () => {
   };
 
   const cartProceed = async (cartItems) => {
-    if (cartItems.length > 0) {
-      await clearFormData();
-      navigate("/checkout");
-    } else {
-      Swal.fire({
-        title: "Cart Is Empty",
-        text: "Please add items to your cart before proceeding to checkout.",
-        icon: "warning",
-        confirmButtonText: "Got It",
-        confirmButtonColor: "#14BFEEBF",
-      });
+    try{
+      if (cartItems.length > 0) {
+        const response = await clearFormData();
+        if(response?.status >= 200 && response?.status < 300){
+          navigate("/checkout");
+        }
+        else if(!response?.status >= 200 && !response?.status < 300) {
+          Swal.fire({
+            title: "Cart Is Empty",
+            text: "Please add items to your cart before proceeding to checkout.",
+            icon: "warning",
+            confirmButtonText: "Got It",
+            confirmButtonColor: "#14BFEEBF",
+          });
+        }
+      } 
+    }
+    catch(error){
+      console.error(error)
     }
   };
 

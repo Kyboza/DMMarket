@@ -78,7 +78,6 @@ const Header = () => {
           showConfirmButton: false,
           timer: 1500,
         });
-        throw new Error("Could not log out");
       }
     } catch (error) {
       console.log(error.message);
