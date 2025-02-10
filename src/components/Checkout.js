@@ -45,16 +45,16 @@ const Checkout = () => {
       if (response.url) {
         window.location.href = response.url;
       } else {
-        throw new Error("Failed to retrieve checkout session URL.");
+        Swal.fire({
+          title: "Checkout Error",
+          text: "Something went wrong. Please try again.",
+          icon: "error",
+          confirmButtonText: "Try Again",
+          confirmButtonColor: "#14BFEEBF",
+        });
       }
     } catch (error) {
-      Swal.fire({
-        title: "Checkout Error",
-        text: error.message || "Something went wrong. Please try again.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-        confirmButtonColor: "#14BFEEBF",
-      });
+      console.error(error.message)
     }
   };
   
