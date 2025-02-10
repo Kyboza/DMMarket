@@ -12,3 +12,4 @@
 20250202	18:52:06	764296e0-db3a-4136-904e-50d9fcc301f3	POST	http://localhost:3000	/auth
 20250202	18:52:25	7328eef9-86e2-4984-bc13-089edc030a3a	GET	http://localhost:3000	/logout
 20250202	21:42:54	f2ceeda5-8e95-4d67-b76b-47e5fc24b32f	POST	http://localhost:3000	/posts
+20250210	12:36:52	72aa1ba4-eb63-4cbb-b1a9-73b5b295e1e7	POST	http://localhost:3000	/create-checkout-session

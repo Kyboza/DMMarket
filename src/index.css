@@ -792,7 +792,7 @@ body {
 .DM__img_price_text{
   color: white;
   font-family: sans-serif;
-  font-size: clamp(0.5rem, 5vw, 2rem);
+  font-size: clamp(0.5rem, 3vw, 2rem);
   text-align: center;
   text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.5);
 }
