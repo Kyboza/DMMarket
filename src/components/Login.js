@@ -34,62 +34,19 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  // const handleLogin = async (e) => {
-  //   try {
-  //     e.preventDefault();
-  //     await loginUser({ user: username, pwd: password });
-  //     resetFields();
-  //     await Swal.fire({
-  //       title: "Log In Successful",
-  //       icon: "success",
-  //       showConfirmButton: false,
-  //       timer: 1500,
-  //     });
-  //     setLoggedIn(true);
-  //     navigate("/");
-  //   } catch (error) {
-  //     await Swal.fire({
-  //       title: "Error logging in",
-  //       icon: "error",
-  //       showConfirmButton: false,
-  //       timer: 1500,
-  //     });
-  //     console.log(error.message);
-  //   }
-  // };
-
   const handleLogin = async (e) => {
     try {
       e.preventDefault();
-      
-      const response = await fetch("http://localhost:5000/auth", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ user: username, pwd: password }),
-        credentials: "include",  // För att hantera cookies
-      });
-  
-      if (!response.ok) {
-        throw new Error("Login failed: " + response.statusText);
-      }
-  
-      const data = await response.json();
-      console.log("Login Successful:", data);
-  
+      await loginUser({ user: username, pwd: password });
       resetFields();
-  
       await Swal.fire({
         title: "Log In Successful",
         icon: "success",
         showConfirmButton: false,
         timer: 1500,
       });
-  
       setLoggedIn(true);
       navigate("/");
-  
     } catch (error) {
       await Swal.fire({
         title: "Error logging in",
@@ -97,7 +54,7 @@ const Login = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      console.error("Login Failed:", error.message);
+      console.log(error.message);
     }
   };
 
