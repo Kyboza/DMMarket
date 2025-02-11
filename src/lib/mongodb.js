@@ -4,7 +4,7 @@ require("dotenv").config()
 const MONGO_URI = process.env.MONGO_URI;
 
 if (!MONGO_URI) {
-  console.log("Could not get MONGO ENV VARIABLE");
+  console.log("Could not get MONGO ENV VARIABLE", process.env.MONGO_URI);
   throw new Error("Could not get MONGO ENV VARIABLE");
 }
 
