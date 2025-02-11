@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const { Schema } = require("mongoose");
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   roles: {
@@ -11,6 +12,6 @@ const userSchema = new mongoose.Schema({
 });
 
 // Skapa eller använd redan existerande User-modell
-const User = mongoose.models.User || mongoose.model("User", userSchema, "users");
+const User = mongoose.models.user || mongoose.model("User", userSchema, "users");
 
 module.exports = User;
