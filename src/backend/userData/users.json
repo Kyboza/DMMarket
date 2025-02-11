@@ -1,28 +1,3 @@
 [
-  {
-    "username": "Johan",
-    "email": "cjfc@hotmail.se",
-    "roles": {
-      "User": 2001
-    },
-    "password": "$2b$10$hPOWFEFQeHDw9er3DAQpLuISGYOF6paAkujI2zBMQP3UQTE80kyCO"
-  },
-  {
-    "username": "Kyboz",
-    "email": "johanclifford746@gmail.com",
-    "roles": {
-      "User": 2001
-    },
-    "password": "$2b$10$zFEl1WCvmiJuhQbsgoFtoO2932UoBo90FZc0MD7/nsXmxCN5y7/bi",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikt5Ym96IiwiaWF0IjoxNzMyMTI4NjEyLCJleHAiOjE3MzIyMTUwMTJ9.bjF9IJ_wkgKsNnREbGdqRWDrR7Af1_aIH91KANFcTic"
-  },
-  {
-    "username": "jolan",
-    "email": "Test123@gmail.com",
-    "roles": {
-      "User": 2001
-    },
-    "password": "$2b$10$8GEc2kjdbqyQyIAuWvl2nu.xvb4dYVvR48fxtF3BdGaXokz1x.48O",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvbGFuIiwiaWF0IjoxNzM5MjgyMTE5LCJleHAiOjE3MzkzNjg1MTl9.iyx1sRkRhZrypg99CjgIIEXGKQioXpr5q1eCjTNSGLw"
-  }
+  
 ]
