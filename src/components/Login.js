@@ -38,7 +38,8 @@ const Login = () => {
     try {
       e.preventDefault();
       const response = await loginUser({ user: user, pwd: pwd });
-      if (response.ok) {
+  
+      if (response && response.accessToken) {
         await Swal.fire({
           title: "Log In Successful",
           icon: "success",
@@ -46,7 +47,7 @@ const Login = () => {
           timer: 1500,
         });
         setLoggedIn(true);
-        navigate("/");
+        navigate("/"); 
         resetFields();
       } else {
         await Swal.fire({
@@ -66,6 +67,7 @@ const Login = () => {
       });
     }
   };
+  
   
 
   const togglePasswordVisibility = () => {
