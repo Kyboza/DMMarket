@@ -45,3 +45,5 @@
 20250211	15:32:01	ef75ef37-a38c-42b3-8038-f2707f3abcfe	POST	http://localhost:3000	/auth
 20250211	15:33:04	5827a7c3-1f86-4a03-b90c-ab94a4ffa353	POST	http://localhost:3000	/auth
 20250211	15:33:11	717faf33-f8cb-474a-b2c4-c9ec6bc68c39	POST	http://localhost:3000	/auth
+20250211	18:14:22	679d019b-6f0a-4ed9-bc55-914d324d481b	GET	undefined	/api/register
+20250211	18:15:02	d17cb81d-f4be-40d5-a954-92910ad71b23	GET	undefined	/api

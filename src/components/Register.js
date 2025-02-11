@@ -29,8 +29,8 @@ const Register = () => {
     e.preventDefault();
   
     try {
-      await registerUser({ user: username, email: email, pwd: password });
-  
+      await registerUser({ username, email, password });
+    
       Swal.fire({
         title: 'Success!',
         text: 'You have registered successfully!',
@@ -40,16 +40,19 @@ const Register = () => {
         confirmButtonColor: "#14BFEEBF",
       });
       resetFields();
-      navigate('/')
+      navigate('/');
     } catch (error) {
+      const errorMessage = error.response?.data?.message || 'There was an issue with your registration. Please try again.';
+      
       Swal.fire({
         title: 'Error!',
-        text: 'There was an issue with your registration. Please try again.',
+        text: errorMessage,
         icon: 'error',
         confirmButtonText: "Ok",
         confirmButtonColor: "#14BFEEBF",
       });
     }
+    
   };
 
   return (
