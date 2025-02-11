@@ -45,7 +45,6 @@ router.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.use("/api", router);
 
 // Om vi är i utvecklingsläge, starta servern på en port
 if (process.env.NODE_ENV === "development") {
@@ -53,6 +52,8 @@ if (process.env.NODE_ENV === "development") {
   app.listen(PORT, () => {
     console.log(`Server is running locally on port ${PORT}`);
   });
+} else if(process.env.NODE_ENV === "production"){
+  app.use("/api", router);
 }
 
 // Exportera appen för användning i Netlify functions
