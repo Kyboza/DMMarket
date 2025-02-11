@@ -62,7 +62,7 @@ const Header = () => {
     e.preventDefault();
     try {
       const response = await logoutUser();
-      if (response?.status === 200) {
+      if (response?.status === 204) {
         await Swal.fire({
           title: "Log Out Successful",
           icon: "success",
@@ -71,7 +71,7 @@ const Header = () => {
         });
         setLoggedIn(false);
         navigate("/");
-      } else if (!response?.status === 200) {
+      } else if (!response?.status === 204) {
         Swal.fire({
           title: "Error During Logout",
           icon: "error",

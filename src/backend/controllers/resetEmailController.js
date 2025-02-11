@@ -1,13 +1,7 @@
 require("dotenv").config();
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
-
-const usersDB = {
-  users: require("../userData/users.json"),
-  setUsers: (data) => {
-    usersDB.users = data;
-  },
-};
+const User = require("../../models/user");
 
 const verificationCodes = {};
 
@@ -40,7 +34,7 @@ const handleEmailReset = async (req, res) => {
   const { email } = req.body;
   if (!email) return res.sendStatus(400);
 
-  const foundUser = usersDB.users.find((person) => person.email === email);
+  const foundUser = await User.findOne({email: email})
   if (!foundUser) return res.sendStatus(404);
 
   try {

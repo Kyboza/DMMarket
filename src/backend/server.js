@@ -35,6 +35,13 @@ connectDatabase();
 const router = express.Router();
 router.use("/register", require("./routes/register"));
 router.use("/auth", require("./routes/auth"));
+router.use("/refresh", require("./routes/refresh"));
+router.use("/logout", require("./routes/logout"));
+router.use("/emailverification", require("./routes/emailVerification"));
+router.use("/verifycode", require("./routes/verifyCode"));
+router.use("/new-password", require("./routes/newPassword"));
+router.use("/create-checkout-session", require("./routes/paymentRedirect"));
+
 
 // Use JWT Authentication middleware on protected routes
 router.use(verifyJWT);

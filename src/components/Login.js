@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const username = useStoreState((state) => state.formFields.username);
-  const password = useStoreState((state) => state.formFields.password);
+  const user = useStoreState((state) => state.formFields.username);
+  const pwd = useStoreState((state) => state.formFields.password);
 
   const setUsername = useStoreActions(
     (actions) => actions.formFields.setUsername
@@ -37,7 +37,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     try {
       e.preventDefault();
-      const response = await loginUser({ user: username, pwd: password });
+      const response = await loginUser({ user: user, pwd: pwd });
       if(response?.status === 200){
         await Swal.fire({
           title: "Log In Successful",
@@ -81,7 +81,7 @@ const Login = () => {
             className="Login__input"
             required
             autoComplete="off"
-            value={username}
+            value={user}
             onChange={(e) => setUsername(e.target.value)}
           />
           <FaUser className="Login__hidden" />
@@ -95,7 +95,7 @@ const Login = () => {
             className="Login__input"
             required
             autoComplete="off"
-            value={password}
+            value={pwd}
             onChange={(e) => setPassword(e.target.value)}
           />
           {showPassword ? (

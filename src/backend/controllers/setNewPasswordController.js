@@ -1,14 +1,6 @@
-const usersDB = {
-  users: require("../userData/users.json"),
-  setUsers: (data) => {
-    usersDB.users = data;
-  },
-};
-
+const User = require("../../models/user");
 const { verificationCodes } = require("../controllers/resetEmailController");
 const bcrypt = require("bcrypt");
-const fsPromises = require("fs").promises;
-const path = require("path");
 
 const handleNewPassword = async (req, res) => {
   const { email, newPassword, confirmNewPassword } = req.body;
@@ -41,21 +33,13 @@ const handleNewPassword = async (req, res) => {
   try {
     const hashedNewPwd = await bcrypt.hash(newPassword, 10);
 
-    const otherUsers = usersDB.users.filter((person) => person.email !== email);
-    const currentUser = usersDB.users.find((person) => person.email === email);
+    const currentUser = await User.findOne({email: email})
 
     if (!currentUser) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    const updatedUser = { ...currentUser, password: hashedNewPwd };
-
-    usersDB.setUsers([...otherUsers, updatedUser]);
-
-    await fsPromises.writeFile(
-      path.join(__dirname, "..", "userData", "users.json"),
-      JSON.stringify(usersDB.users, null, 2)
-    );
+    await User.findOneAndUpdate({ email: email }, { password: hashedNewPwd });
 
     delete verificationCodes[email];
 
