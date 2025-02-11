@@ -1,14 +1,14 @@
 import React from "react";
 import Swal from 'sweetalert2';
 import { useNavigate } from "react-router-dom";
-import { FaUser, FaEye } from "react-icons/fa";
+import { FaUser, FaEye, FaEyeSlash } from "react-icons/fa";  // Se till att FaEyeSlash är importerat
 import { useStoreActions, useStoreState } from "easy-peasy";
 
 const Register = () => {
   const user = useStoreState((state) => state.formFields.username);
   const pwd = useStoreState((state) => state.formFields.password);
   const email = useStoreState((state) => state.formFields.email);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const setUsername = useStoreActions(
     (actions) => actions.formFields.setUsername
@@ -25,12 +25,23 @@ const Register = () => {
     (actions) => actions.formFields.resetFields
   );
 
+  // Hämta showPassword från Easy Peasy Store
+  const showPassword = useStoreState((state) => state.formFields.showPassword);
+  const setShowPassword = useStoreActions(
+    (actions) => actions.formFields.setShowPassword
+  );
+
+  // Funktion för att växla visibilitet på lösenordet
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       await registerUser({ user, email, pwd });
-    
+
       Swal.fire({
         title: 'Success!',
         text: 'You have registered successfully!',
@@ -43,7 +54,7 @@ const Register = () => {
       navigate('/');
     } catch (error) {
       const errorMessage = error.response?.data?.message || 'There was an issue with your registration. Please try again.';
-      
+
       Swal.fire({
         title: 'Error!',
         text: errorMessage,
@@ -52,7 +63,6 @@ const Register = () => {
         confirmButtonColor: "#14BFEEBF",
       });
     }
-    
   };
 
   return (
@@ -95,7 +105,7 @@ const Register = () => {
 
         <div className="Login__section_container">
           <input
-            type="password"
+            type={showPassword ? "text" : "password"} 
             id="regpassword"
             name="password"
             placeholder="Password"
@@ -105,7 +115,17 @@ const Register = () => {
             value={pwd}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <FaEye className="Login__eye_icon" />
+          {showPassword ? (
+            <FaEyeSlash
+              className="Login__eye_icon"
+              onClick={togglePasswordVisibility}  
+            />
+          ) : (
+            <FaEye
+              className="Login__eye_icon"
+              onClick={togglePasswordVisibility}
+            />
+          )}
         </div>
 
         <div className="Login__button_container">
