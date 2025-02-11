@@ -1,59 +1,46 @@
-require("dotenv").config();
-const bcrypt = require("bcrypt");
-const fsPromises = require("fs").promises;
-const path = require("path");
-
-const usersDB = {
-  users: require("../userData/users.json"),
-  setUsers: (data) => {
-    usersDB.users = data;
-  },
-};
+import bcrypt from 'bcryptjs';
+import User from '../models/user';  // Importera din Mongoose modell
 
 const handleNewUser = async (req, res) => {
-  const { user, pwd, email } = req.body;
+  const { username, password, email } = req.body;
 
-  if (!user || !pwd || !email) {
-    return res
-      .status(400)
-      .json({ message: "Username, password, and email are required" });
+  if (!username || !password || !email) {
+    return res.status(400).json({ message: 'Username, password, and email are required' });
   }
 
-  const duplicateUser = usersDB.users.find(
-    (person) => person.username === user
-  );
-  const duplicateEmail = usersDB.users.find((person) => person.email === email);
+  // Kontrollera om användarnamnet eller emailen redan finns
+  const duplicateUser = await User.findOne({ username });
+  const duplicateEmail = await User.findOne({ email });
 
   if (duplicateUser) {
-    return res.sendStatus(409);
+    return res.status(409).json({ message: 'Username already in use' });
   }
 
   if (duplicateEmail) {
-    return res.status(409).json({ message: "Email already in use" });
+    return res.status(409).json({ message: 'Email already in use' });
   }
 
   try {
-    const hashedPwd = await bcrypt.hash(pwd, 10);
+    // Hasha lösenordet
+    const hashedPwd = await bcrypt.hash(password, 10);
 
-    const newUser = {
-      username: user,
-      email: email,
-      roles: { User: 2001 },
+    // Skapa en ny användare
+    const newUser = new User({
+      username,
+      email,
       password: hashedPwd,
-    };
+      roles: { User: 2001 },  // Standardrollen för en användare
+    });
 
-    usersDB.setUsers([...usersDB.users, newUser]);
+    // Spara användaren i databasen
+    await newUser.save();
 
-    await fsPromises.writeFile(
-      path.join(__dirname, "..", "userData", "users.json"),
-      JSON.stringify(usersDB.users, null, 2)
-    );
-
-    console.log(usersDB.users);
-    res.status(201).json({ success: `New user ${user} created!` });
-  } catch (err) {
-    res.status(500).json({ message: err.message });
+    res.status(201).json({ message: `New user ${username} created!` });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error creating user' });
   }
 };
 
-module.exports = handleNewUser;
+export default handleNewUser;
+
