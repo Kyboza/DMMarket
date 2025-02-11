@@ -5,8 +5,8 @@ import { FaUser, FaEye } from "react-icons/fa";
 import { useStoreActions, useStoreState } from "easy-peasy";
 
 const Register = () => {
-  const username = useStoreState((state) => state.formFields.username);
-  const password = useStoreState((state) => state.formFields.password);
+  const user = useStoreState((state) => state.formFields.username);
+  const pwd = useStoreState((state) => state.formFields.password);
   const email = useStoreState((state) => state.formFields.email);
   const navigate = useNavigate()
 
@@ -29,7 +29,7 @@ const Register = () => {
     e.preventDefault();
   
     try {
-      await registerUser({ username, email, password });
+      await registerUser({ user, email, pwd });
     
       Swal.fire({
         title: 'Success!',
@@ -72,7 +72,7 @@ const Register = () => {
             className="Login__input"
             required
             autoComplete="off"
-            value={username}
+            value={user}
             onChange={(e) => setUsername(e.target.value)}
           />
           <FaUser className="Login__hidden" />
@@ -102,7 +102,7 @@ const Register = () => {
             className="Login__input"
             required
             autoComplete="off"
-            value={password}
+            value={pwd}
             onChange={(e) => setPassword(e.target.value)}
           />
           <FaEye className="Login__eye_icon" />
