@@ -59,32 +59,37 @@ const Nav = () => {
   }, [setLoggedIn]);
 
   const loggingOut = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await logoutUser();
-
-      if (response?.status === 204) {
+      e.preventDefault();
+      try {
+        const response = await logoutUser();
+    
+        if (response?.status === 204) {
+          await Swal.fire({
+            title: "Log Out Successful",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          setLoggedIn(false);
+          navigate("/");
+        } else {
+          await Swal.fire({
+            title: "Error During Logout",
+            icon: "error",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      } catch (error) {
+        console.log(error.message);
         await Swal.fire({
-          title: "Log Out Successful",
-          icon: "success",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        setLoggedIn(false);
-        navigate("/");
-      } else {
-        Swal.fire({
-          title: "Error During Logout",
+          title: "Something went wrong",
           icon: "error",
           showConfirmButton: false,
           timer: 1500,
         });
-        throw new Error("Logout failed");
       }
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+    };
 
   useEffect(() => {
     const handleOutsideClick = (event) => {

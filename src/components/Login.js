@@ -38,7 +38,8 @@ const Login = () => {
     try {
       e.preventDefault();
       const response = await loginUser({ user: user, pwd: pwd });
-      if(response?.status === 200){
+  
+      if (response?.status === 200) {
         await Swal.fire({
           title: "Log In Successful",
           icon: "success",
@@ -48,7 +49,7 @@ const Login = () => {
         setLoggedIn(true);
         navigate("/");
         resetFields();
-      } else if (!response?.status === 200) {
+      } else {
         await Swal.fire({
           title: "Error logging in",
           icon: "error",
@@ -58,8 +59,15 @@ const Login = () => {
       }
     } catch (error) {
       console.log(error.message);
+      await Swal.fire({
+        title: "Something went wrong",
+        icon: "error",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
+  
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);

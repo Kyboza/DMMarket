@@ -62,6 +62,7 @@ const Header = () => {
     e.preventDefault();
     try {
       const response = await logoutUser();
+  
       if (response?.status === 204) {
         await Swal.fire({
           title: "Log Out Successful",
@@ -71,8 +72,8 @@ const Header = () => {
         });
         setLoggedIn(false);
         navigate("/");
-      } else if (!response?.status === 204) {
-        Swal.fire({
+      } else {
+        await Swal.fire({
           title: "Error During Logout",
           icon: "error",
           showConfirmButton: false,
@@ -81,8 +82,15 @@ const Header = () => {
       }
     } catch (error) {
       console.log(error.message);
+      await Swal.fire({
+        title: "Something went wrong",
+        icon: "error",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
+  
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
