@@ -38,8 +38,7 @@ const Login = () => {
     try {
       e.preventDefault();
       const response = await loginUser({ user: user, pwd: pwd });
-  
-      if (response?.status === 200) {
+      if (response.ok) {
         await Swal.fire({
           title: "Log In Successful",
           icon: "success",
