@@ -1,6 +1,6 @@
 require("dotenv").config();
 const bcrypt = require("bcrypt");
-const User = require("../models/user");  // Importera din Mongoose User-modell
+const User = require("../../models/user")  // Importera din Mongoose User-modell
 
 const handleNewUser = async (req, res) => {
   const { user, pwd, email } = req.body;
