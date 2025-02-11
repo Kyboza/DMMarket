@@ -84,8 +84,10 @@ const storeModel = {
     loginUser: thunk(async (actions, payload) => {
       try {
         const response = await postsAPI.post("/auth", payload);
-        console.log("Successfully logged in")
-        return response.status
+        if(response.status === 200){
+          console.log("Success")
+          return response.data
+        }
       } catch (error) {
         console.error("Login Failed:", error);
       }
