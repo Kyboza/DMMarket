@@ -49,4 +49,4 @@ router.use(verifyJWT);
 app.use("/api", router);
 
 // Exportera appen för Netlify Functions
-module.exports.handler = require("serverless-http")(app); // Integrera serverless-http här
+module.exports = app
