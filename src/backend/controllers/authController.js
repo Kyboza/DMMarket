@@ -14,7 +14,7 @@ const handleLogin = async (req, res) => {
     const foundUser = await User.findOne({ username: user });
 
     if (!foundUser) {
-      console.log("User not found:", user);
+      console.log("User was not found:", user);
       return res.status(401).json({ message: "Invalid username or password" });
     }
 
