@@ -11,5 +11,3 @@ status = 200
 [build]
 functions = "netlify/functions"
 
-[functions]
-timeout = 30
