@@ -5,46 +5,46 @@ const verifyJWT = require("./middleware/verifyJWT");
 const credentials = require("./middleware/credentials");
 const cookieParser = require("cookie-parser");
 const { logger } = require("./middleware/logEvents");
-const verifyRoles = require("./middleware/verifyRoles");
 require("dotenv").config();
 
 const app = express();
+
 app.use(credentials);
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
 app.use(logger);
 
-app.use("/register", require("./routes/register"));
-app.use("/auth", require("./routes/auth"));
-app.use("/refresh", require("./routes/refresh"));
-app.use("/logout", require("./routes/logout"));
-app.use("/emailverification", require("./routes/emailVerification"));
-app.use("/verifycode", require("./routes/verifyCode"));
-app.use("/new-password", require("./routes/newPassword"));
-app.use("/create-checkout-session", require("./routes/paymentRedirect"));
+const router = express.Router();
 
-app.use(verifyJWT);
+router.use("/register", require("./routes/register"));
+router.use("/auth", require("./routes/auth"));
+router.use("/refresh", require("./routes/refresh"));
+router.use("/logout", require("./routes/logout"));
+router.use("/emailverification", require("./routes/emailVerification"));
+router.use("/verifycode", require("./routes/verifyCode"));
+router.use("/new-password", require("./routes/newPassword"));
+router.use("/create-checkout-session", require("./routes/paymentRedirect"));
+
+router.use(verifyJWT);
 
 let posts = [];
 
-app.post("/posts", (req, res) => {
+router.post("/posts", (req, res) => {
   const newPost = req.body;
   posts.push(newPost);
   res.status(201).json(newPost);
 });
 
-app.get("/posts", (req, res) => {
+router.get("/posts", (req, res) => {
   res.json(posts);
 });
 
-app.use((req, res) => {
+router.use((req, res) => {
   res.sendStatus(404);
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.use("/api", router);
+
+module.exports = app;

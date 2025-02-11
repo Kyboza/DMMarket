@@ -38,7 +38,7 @@ const Login = () => {
     try {
       e.preventDefault();
       const response = await loginUser({ user: username, pwd: password });
-      if(response?.status === 204){
+      if(response?.status === 200){
         await Swal.fire({
           title: "Log In Successful",
           icon: "success",
@@ -48,7 +48,7 @@ const Login = () => {
         setLoggedIn(true);
         navigate("/");
         resetFields();
-      } else if (!response?.status === 204) {
+      } else if (!response?.status === 200) {
         await Swal.fire({
           title: "Error logging in",
           icon: "error",

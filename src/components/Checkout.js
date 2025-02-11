@@ -41,7 +41,6 @@ const Checkout = () => {
   
     try {
       const response = await checkoutCart(cartItems);
-  
       if (response.url) {
         window.location.href = response.url;
       } else {
