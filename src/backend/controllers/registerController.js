@@ -1,5 +1,5 @@
-import bcrypt from 'bcryptjs';
-import User from '../models/user';  // Importera din Mongoose modell
+const bcrypt = require('bcrypt')
+const User = require('../models/user');  // Importera din Mongoose modell
 
 const handleNewUser = async (req, res) => {
   const { username, password, email } = req.body;
