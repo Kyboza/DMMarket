@@ -33,13 +33,14 @@ const handleNewPassword = async (req, res) => {
   try {
     const hashedNewPwd = await bcrypt.hash(newPassword, 10);
 
-    const currentUser = await User.findOne({email: email})
+    const currentUser = await User.findOne({ email });
 
     if (!currentUser) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    await User.findOneAndUpdate({ email: email }, { password: hashedNewPwd });
+    currentUser.password = hashedNewPwd;
+    await currentUser.save();
 
     delete verificationCodes[email];
 
@@ -47,6 +48,7 @@ const handleNewPassword = async (req, res) => {
       message: `The password for the email: ${email} has been updated`,
     });
   } catch (error) {
+    console.error("Error updating password:", error);
     return res.status(500).json({ message: "Failed to update user password" });
   }
 };

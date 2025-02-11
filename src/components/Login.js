@@ -39,7 +39,7 @@ const Login = () => {
       e.preventDefault();
       const response = await loginUser({ user: user, pwd: pwd });
   
-      if (response && response.accessToken) {
+      if (response?.accessToken) {
         await Swal.fire({
           title: "Log In Successful",
           icon: "success",
