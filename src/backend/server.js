@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { connectToDB } = require("./lib/mongodb");  // Make sure this path is correct
+const { connectToDB } = require("../lib/mongodb");  // Make sure this path is correct
 const corsOptions = require("./config/corsOptions");
 const verifyJWT = require("./middleware/verifyJWT");
 const credentials = require("./middleware/credentials");
