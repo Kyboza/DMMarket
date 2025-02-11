@@ -1,57 +1,50 @@
 require("dotenv").config();
 const bcrypt = require("bcrypt");
-const fsPromises = require("fs").promises;
-const path = require("path");
-
-const usersDB = {
-  users: require("../userData/users.json"),
-  setUsers: (data) => {
-    usersDB.users = data;
-  },
-};
+const User = require("../models/user");  // Importera din Mongoose User-modell
 
 const handleNewUser = async (req, res) => {
   const { user, pwd, email } = req.body;
 
+  // Kolla om alla nödvändiga fält är med
   if (!user || !pwd || !email) {
     return res
       .status(400)
       .json({ message: "Username, password, and email are required" });
   }
 
-  const duplicateUser = usersDB.users.find(
-    (person) => person.username === user
-  );
-  const duplicateEmail = usersDB.users.find((person) => person.email === email);
-
-  if (duplicateUser) {
-    return res.sendStatus(409);
-  }
-
-  if (duplicateEmail) {
-    return res.status(409).json({ message: "Email already in use" });
-  }
-
   try {
+    // Kolla om användarnamnet redan finns i databasen
+    const duplicateUser = await User.findOne({ username: user });
+
+    if (duplicateUser) {
+      return res.status(409).json({ message: "Username already in use" });
+    }
+
+    // Kolla om e-postadressen redan används
+    const duplicateEmail = await User.findOne({ email });
+
+    if (duplicateEmail) {
+      return res.status(409).json({ message: "Email already in use" });
+    }
+
+    // Hasha lösenordet
     const hashedPwd = await bcrypt.hash(pwd, 10);
 
-    const newUser = {
+    // Skapa en ny användare
+    const newUser = new User({
       username: user,
       email: email,
-      roles: { User: 2001 },
+      roles: { User: 2001 }, // Default användarroll
       password: hashedPwd,
-    };
+    });
 
-    usersDB.setUsers([...usersDB.users, newUser]);
+    // Spara användaren i databasen
+    await newUser.save();
 
-    await fsPromises.writeFile(
-      path.join(__dirname, "..", "userData", "users.json"),
-      JSON.stringify(usersDB.users, null, 2)
-    );
-
-    console.log(usersDB.users);
+    // Skicka tillbaka ett svar med successmeddelande
     res.status(201).json({ success: `New user ${user} created!` });
   } catch (err) {
+    console.error(err);
     res.status(500).json({ message: err.message });
   }
 };
