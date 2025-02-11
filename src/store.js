@@ -74,7 +74,7 @@ const storeModel = {
 
     registerUser: thunk(async (actions, payload) => {
       try {
-        const response = await postsAPI.post("/register", payload);
+        const response = await postsAPI.post("/api/register", payload);
         console.log(response.data);
       } catch (error) {
         console.error("Registration failed:", error);
