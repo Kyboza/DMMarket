@@ -1,13 +1,12 @@
 const express = require("express");
 const cors = require("cors");
-const { connectToDB } = require("../lib/mongodb");
+const { connectToDB } = require("./lib/mongodb");  // Make sure this path is correct
 const corsOptions = require("./config/corsOptions");
 const verifyJWT = require("./middleware/verifyJWT");
 const credentials = require("./middleware/credentials");
 const cookieParser = require("cookie-parser");
 const { logger } = require("./middleware/logEvents");
 require("dotenv").config();
-const serverless = require("serverless-http");
 
 const app = express();
 
@@ -23,31 +22,25 @@ app.use(logger);
 async function connectDatabase() {
   try {
     const dbConnection = await connectToDB();
-    console.log(dbConnection.message);  // Bekräfta om vi är anslutna till DB
+    console.log(dbConnection.message);  // Confirm if connected to DB
   } catch (err) {
     console.log("DB Connection failed:", err);
-    process.exit(1);  // Avsluta om vi inte kan ansluta till DB
+    process.exit(1);  // Exit if DB connection fails
   }
 }
 
 connectDatabase();
 
-// Routes
+// Routes (Example route)
 const router = express.Router();
-
 router.use("/register", require("./routes/register"));
 router.use("/auth", require("./routes/auth"));
-router.use("/refresh", require("./routes/refresh"));
-router.use("/logout", require("./routes/logout"));
-router.use("/emailverification", require("./routes/emailVerification"));
-router.use("/verifycode", require("./routes/verifyCode"));
-router.use("/new-password", require("./routes/newPassword"));
-router.use("/create-checkout-session", require("./routes/paymentRedirect"));
 
-// Middleware för autentisering
+// Use JWT Authentication middleware on protected routes
 router.use(verifyJWT);
 
+// All routes are prefixed with `/api`
 app.use("/api", router);
 
-// Exportera appen för serverless-function
-module.exports.handler = serverless(app);
+// Export the app so it can be used by the serverless function
+module.exports = app;
