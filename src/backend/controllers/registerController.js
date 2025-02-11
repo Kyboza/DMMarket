@@ -1,46 +1,52 @@
-const bcrypt = require('bcrypt')
-const User = require('../models/user');  // Importera din Mongoose modell
+require("dotenv").config();
+const bcrypt = require("bcrypt");
+const User = require("../models/user");  // Importera Mongoose-modellen för användare
 
 const handleNewUser = async (req, res) => {
-  const { username, password, email } = req.body;
+  const { user, pwd, email } = req.body;
 
-  if (!username || !password || !email) {
-    return res.status(400).json({ message: 'Username, password, and email are required' });
-  }
-
-  // Kontrollera om användarnamnet eller emailen redan finns
-  const duplicateUser = await User.findOne({ username });
-  const duplicateEmail = await User.findOne({ email });
-
-  if (duplicateUser) {
-    return res.status(409).json({ message: 'Username already in use' });
-  }
-
-  if (duplicateEmail) {
-    return res.status(409).json({ message: 'Email already in use' });
+  // Kolla att alla nödvändiga data finns med
+  if (!user || !pwd || !email) {
+    return res
+      .status(400)
+      .json({ message: "Username, password, and email are required" });
   }
 
   try {
-    // Hasha lösenordet
-    const hashedPwd = await bcrypt.hash(password, 10);
+    // Kolla om användarnamnet redan finns
+    const duplicateUser = await User.findOne({ username: user });
+
+    if (duplicateUser) {
+      return res.status(409).json({ message: "Username already in use" });
+    }
+
+    // Kolla om e-postadressen redan används
+    const duplicateEmail = await User.findOne({ email });
+
+    if (duplicateEmail) {
+      return res.status(409).json({ message: "Email already in use" });
+    }
+
+    // Hasha lösenordet innan vi sparar användaren
+    const hashedPwd = await bcrypt.hash(pwd, 10);
 
     // Skapa en ny användare
     const newUser = new User({
-      username,
-      email,
+      username: user,
+      email: email,
+      roles: { User: 2001 }, // Default user role
       password: hashedPwd,
-      roles: { User: 2001 },  // Standardrollen för en användare
     });
 
     // Spara användaren i databasen
     await newUser.save();
 
-    res.status(201).json({ message: `New user ${username} created!` });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Error creating user' });
+    // Skicka tillbaka ett svar med successmeddelande
+    res.status(201).json({ success: `New user ${user} created!` });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: err.message });
   }
 };
 
-export default handleNewUser;
-
+module.exports = handleNewUser;
