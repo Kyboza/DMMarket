@@ -1,19 +1,19 @@
-import Bullrazer from "../images/sets/dm-03/Bullrazer.jpg";
-import Bynor from "../images/sets/dm-03/Bynor.jpg";
-import Emeral from "../images/sets/dm-03/Emeral.jpg";
-import Jabaha from "../images/sets/dm-03/Jabaha.jpg";
-import Lena from "../images/sets/dm-03/Lena.jpg";
-import Liquid from "../images/sets/dm-03/Liquid.jpg";
-import Mana from "../images/sets/dm-03/Mana.jpg";
-import Searing from "../images/sets/dm-03/Searing.jpg";
-import Shaper from "../images/sets/dm-03/Shaper.jpg";
-import Shtra from "../images/sets/dm-03/Shtra.jpg";
-import Sieg from "../images/sets/dm-03/Sieg.jpg";
-import Sniper from "../images/sets/dm-03/Sniper.jpg";
-import Sundrop from "../images/sets/dm-03/Sundrop.jpg";
-import Volcanic from "../images/sets/dm-03/Volcanic.jpg";
-import Snake from "../images/sets/dm-03/Snake.jpg";
-import Stinger from "../images/sets/dm-03/Stinger.jpg";
+import Bullrazer from "../images/sets/dm-03/Bullrazer.webp";
+import Bynor from "../images/sets/dm-03/Bynor.webp";
+import Emeral from "../images/sets/dm-03/Emeral.webp";
+import Jabaha from "../images/sets/dm-03/Jabaha.webp";
+import Lena from "../images/sets/dm-03/Lena.webp";
+import Liquid from "../images/sets/dm-03/Liquid.webp";
+import Mana from "../images/sets/dm-03/Mana.webp";
+import Searing from "../images/sets/dm-03/Searing.webp";
+import Shaper from "../images/sets/dm-03/Shaper.webp";
+import Shtra from "../images/sets/dm-03/Shtra.webp";
+import Sieg from "../images/sets/dm-03/Sieg.webp";
+import Sniper from "../images/sets/dm-03/Sniper.webp";
+import Sundrop from "../images/sets/dm-03/Sundrop.webp";
+import Volcanic from "../images/sets/dm-03/Volcanic.webp";
+import Snake from "../images/sets/dm-03/Snake.webp";
+import Stinger from "../images/sets/dm-03/Stinger.webp";
 
 export const cardDM03 = [
   {

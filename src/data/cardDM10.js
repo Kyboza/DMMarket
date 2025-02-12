@@ -1,19 +1,19 @@
-import Bombazar from "../images/sets/dm-10/Bombazar.jpg";
-import Galek from "../images/sets/dm-10/Galek.jpg";
-import Gonta from "../images/sets/dm-10/Gonta.jpg";
-import Lukia from "../images/sets/dm-10/Lukia.jpg";
-import Melnia from "../images/sets/dm-10/Melnia.jpg";
-import Pointa from "../images/sets/dm-10/Pointa.jpg";
-import Rapid from "../images/sets/dm-10/Rapid.jpg";
-import Sanfist from "../images/sets/dm-10/Sanfist.jpg";
-import Skysword from "../images/sets/dm-10/Skysword.jpg";
-import Soulswap from "../images/sets/dm-10/Soulswap.jpg";
-import Stangrandu from "../images/sets/dm-10/Stangrandu.jpg";
-import Tulk from "../images/sets/dm-10/Tulk.jpg";
-import Transmogify from "../images/sets/dm-10/Transmogify.jpg";
-import Ultimate from "../images/sets/dm-10/Ultimate.jpg";
-import Wind from "../images/sets/dm-10/Wind.jpg";
-import Ullex from "../images/sets/dm-10/Ullex.jpg";
+import Bombazar from "../images/sets/dm-10/Bombazar.webp";
+import Galek from "../images/sets/dm-10/Galek.webp";
+import Gonta from "../images/sets/dm-10/Gonta.webp";
+import Lukia from "../images/sets/dm-10/Lukia.webp";
+import Melnia from "../images/sets/dm-10/Melnia.webp";
+import Pointa from "../images/sets/dm-10/Pointa.webp";
+import Rapid from "../images/sets/dm-10/Rapid.webp";
+import Sanfist from "../images/sets/dm-10/Sanfist.webp";
+import Skysword from "../images/sets/dm-10/Skysword.webp";
+import Soulswap from "../images/sets/dm-10/Soulswap.webp";
+import Stangrandu from "../images/sets/dm-10/Stangrandu.webp";
+import Tulk from "../images/sets/dm-10/Tulk.webp";
+import Transmogify from "../images/sets/dm-10/Transmogify.webp";
+import Ultimate from "../images/sets/dm-10/Ultimate.webp";
+import Wind from "../images/sets/dm-10/Wind.webp";
+import Ullex from "../images/sets/dm-10/Ullex.webp";
 
 export const cardDM10 = [
   {

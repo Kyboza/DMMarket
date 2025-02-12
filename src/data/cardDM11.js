@@ -1,19 +1,19 @@
-import Asra from "../images/sets/dm-11/Asra.jpg";
-import Brad from "../images/sets/dm-11/Brad.jpg";
-import Heary from "../images/sets/dm-11/Heary.jpg";
-import Meltdown from "../images/sets/dm-11/Meltdown.jpg";
-import Plague from "../images/sets/dm-11/Plague.jpg";
-import Rainbow from "../images/sets/dm-11/Rainbow.jpg";
-import Reap from "../images/sets/dm-11/Reap.jpg";
-import Rebirth from "../images/sets/dm-11/Rebirth.jpg";
-import Royal from "../images/sets/dm-11/Royal.jpg";
-import Slash from "../images/sets/dm-11/Slash.jpg";
-import Spinning from "../images/sets/dm-11/Spinning.jpg";
-import Sapian from "../images/sets/dm-11/Sapian.jpg";
-import Totem from "../images/sets/dm-11/Totem.jpg";
-import Truce from "../images/sets/dm-11/Truce.jpg";
-import Typhoon from "../images/sets/dm-11/Typhoon.jpg";
-import Warlord from "../images/sets/dm-11/Warlord.jpg";
+import Asra from "../images/sets/dm-11/Asra.webp";
+import Brad from "../images/sets/dm-11/Brad.webp";
+import Heary from "../images/sets/dm-11/Heary.webp";
+import Meltdown from "../images/sets/dm-11/Meltdown.webp";
+import Plague from "../images/sets/dm-11/Plague.webp";
+import Rainbow from "../images/sets/dm-11/Rainbow.webp";
+import Reap from "../images/sets/dm-11/Reap.webp";
+import Rebirth from "../images/sets/dm-11/Rebirth.webp";
+import Royal from "../images/sets/dm-11/Royal.webp";
+import Slash from "../images/sets/dm-11/Slash.webp";
+import Spinning from "../images/sets/dm-11/Spinning.webp";
+import Sapian from "../images/sets/dm-11/Sapian.webp";
+import Totem from "../images/sets/dm-11/Totem.webp";
+import Truce from "../images/sets/dm-11/Truce.webp";
+import Typhoon from "../images/sets/dm-11/Typhoon.webp";
+import Warlord from "../images/sets/dm-11/Warlord.webp";
 
 export const cardDM11 = [
   {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import MainLogo from "../images/logos/Dmmarketlogo1024x1024.png";
+import MainLogo from "../images/logos/Dmmarketlogo1024x1024.webp";
 import useWindowSize from "../hooks/useWindowSize";
 import { FaShoppingCart, FaSearch, FaUser } from "react-icons/fa";
 import { useStoreState, useStoreActions } from "easy-peasy";

@@ -1,18 +1,18 @@
-import Agent from "../images/sets/dm-07/Agent.jpg";
-import Bex from "../images/sets/dm-07/Bex.jpg";
-import Cetibols from "../images/sets/dm-07/Cetibols.jpg";
-import Cryptic from "../images/sets/dm-07/Cryptic.jpg";
-import Charger from "../images/sets/dm-07/Charger.jpg";
-import Crush from "../images/sets/dm-07/Crush.jpg";
-import Gezary from "../images/sets/dm-07/Gezary.jpg";
-import Gazarias from "../images/sets/dm-07/Gazarias.jpg";
-import Geoshine from "../images/sets/dm-07/Geoshine.jpg";
-import Kizar from "../images/sets/dm-07/Kizar.jpg";
-import Kooc from "../images/sets/dm-07/Kooc.jpg";
-import Popple from "../images/sets/dm-07/Popple.jpg";
-import Propeller from "../images/sets/dm-07/Propeller.jpg";
-import Spinning from "../images/sets/dm-07/Spinning.jpg";
-import Stinger from "../images/sets/dm-07/Stinger.jpg";
+import Agent from "../images/sets/dm-07/Agent.webp";
+import Bex from "../images/sets/dm-07/Bex.webp";
+import Cetibols from "../images/sets/dm-07/Cetibols.webp";
+import Cryptic from "../images/sets/dm-07/Cryptic.webp";
+import Charger from "../images/sets/dm-07/Charger.webp";
+import Crush from "../images/sets/dm-07/Crush.webp";
+import Gezary from "../images/sets/dm-07/Gezary.webp";
+import Gazarias from "../images/sets/dm-07/Gazarias.webp";
+import Geoshine from "../images/sets/dm-07/Geoshine.webp";
+import Kizar from "../images/sets/dm-07/Kizar.webp";
+import Kooc from "../images/sets/dm-07/Kooc.webp";
+import Popple from "../images/sets/dm-07/Popple.webp";
+import Propeller from "../images/sets/dm-07/Propeller.webp";
+import Spinning from "../images/sets/dm-07/Spinning.webp";
+import Stinger from "../images/sets/dm-07/Stinger.webp";
 
 export const cardDM07 = [
   {

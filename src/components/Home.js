@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Bolmeteus from "../images/cards/Bolmeteus403x560.jpg";
-import Bombazar from "../images/cards/Bombazar403x560.jpg";
-import Gigazald from "../images/cards/Gigazald403x560.jpg";
-import Alquedias from "../images/cards/Alqedias403x560.jpg";
-import Naga from "../images/cards/Naga403x560.jpg";
-import Paladin from "../images/cards/Paladin403x560.jpg";
+import Bolmeteus from "../images/cards/Bolmeteus403x560.webp";
+import Bombazar from "../images/cards/Bombazar403x560.webp";
+import Gigazald from "../images/cards/Gigazald403x560.webp";
+import Alquedias from "../images/cards/Alqedias403x560.webp";
+import Naga from "../images/cards/Naga403x560.webp";
+import Paladin from "../images/cards/Paladin403x560.webp";
 
-import FireStarter from "../images/starter/Fire893x683.png";
-import NatureStarter from "../images/starter/Nature1103x888.png";
-import DarkStarter from "../images/starter/Dark1190x760.png";
-import WaterStarter from "../images/starter/Water1063x936.png";
+import FireStarter from "../images/starter/Fire893x683.webp";
+import NatureStarter from "../images/starter/Nature1103x888.webp";
+import DarkStarter from "../images/starter/Dark1190x760.webp";
+import WaterStarter from "../images/starter/Water1063x936.webp";
 
-import ArticlesLogo from "../images/logos/Article1216x832.jpg";
+import ArticlesLogo from "../images/logos/Article1216x832.webp";
 
 import useWindowSize from "../hooks/useWindowSize";
 

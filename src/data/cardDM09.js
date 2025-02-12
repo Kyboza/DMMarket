@@ -1,19 +1,19 @@
-import Balesk from "../images/sets/dm-09/Balesk.jpg";
-import Blitz from "../images/sets/dm-09/Blitz.jpg";
-import Bonanza from "../images/sets/dm-09/Bonanza.jpg";
-import Carnival from "../images/sets/dm-09/Carnival.jpg";
-import Cavern from "../images/sets/dm-09/Cavern.jpg";
-import Cyclo from "../images/sets/dm-09/Cyclo.jpg";
-import Glena from "../images/sets/dm-09/Glena.jpg";
-import Ice from "../images/sets/dm-09/Ice.jpg";
-import Kelp from "../images/sets/dm-09/Kelp.jpg";
-import Marching from "../images/sets/dm-09/Marching.jpg";
-import Petrova from "../images/sets/dm-09/Petrova.jpg";
-import Slash from "../images/sets/dm-09/Slash.jpg";
-import Stallob from "../images/sets/dm-09/Stallob.jpg";
-import Submarine from "../images/sets/dm-09/Submarine.jpg";
-import Trixo from "../images/sets/dm-09/Trixo.jpg";
-import Vreemah from "../images/sets/dm-09/Vreemah.jpg";
+import Balesk from "../images/sets/dm-09/Balesk.webp";
+import Blitz from "../images/sets/dm-09/Blitz.webp";
+import Bonanza from "../images/sets/dm-09/Bonanza.webp";
+import Carnival from "../images/sets/dm-09/Carnival.webp";
+import Cavern from "../images/sets/dm-09/Cavern.webp";
+import Cyclo from "../images/sets/dm-09/Cyclo.webp";
+import Glena from "../images/sets/dm-09/Glena.webp";
+import Ice from "../images/sets/dm-09/Ice.webp";
+import Kelp from "../images/sets/dm-09/Kelp.webp";
+import Marching from "../images/sets/dm-09/Marching.webp";
+import Petrova from "../images/sets/dm-09/Petrova.webp";
+import Slash from "../images/sets/dm-09/Slash.webp";
+import Stallob from "../images/sets/dm-09/Stallob.webp";
+import Submarine from "../images/sets/dm-09/Submarine.webp";
+import Trixo from "../images/sets/dm-09/Trixo.webp";
+import Vreemah from "../images/sets/dm-09/Vreemah.webp";
 
 export const cardDM09 = [
   {

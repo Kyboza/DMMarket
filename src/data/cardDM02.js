@@ -1,19 +1,19 @@
-import Burst from "../images/sets/dm-02/Burst.jpg";
-import Corile from "../images/sets/dm-02/Corile.jpg";
-import Critical from "../images/sets/dm-02/Critical.jpg";
-import Fighter from "../images/sets/dm-02/Fighter.jpg";
-import Fortress from "../images/sets/dm-02/Fortress.jpg";
-import Larba from "../images/sets/dm-02/Larba.jpg";
-import Logic from "../images/sets/dm-02/Logic.jpg";
-import Lost from "../images/sets/dm-02/Lost.jpg";
-import Magris from "../images/sets/dm-02/Magris.jpg";
-import Ooze from "../images/sets/dm-02/Ooze.jpg";
-import Paladin from "../images/sets/dm-02/Paladin.jpg";
-import Phal from "../images/sets/dm-02/Phal.jpg";
-import Rumble from "../images/sets/dm-02/Rumble.jpg";
-import Stained from "../images/sets/dm-02/Stained.jpg";
-import Terahorn from "../images/sets/dm-02/Terahorn.jpg";
-import Valdios from "../images/sets/dm-02/Valdios.jpg";
+import Burst from "../images/sets/dm-02/Burst.webp";
+import Corile from "../images/sets/dm-02/Corile.webp";
+import Critical from "../images/sets/dm-02/Critical.webp";
+import Fighter from "../images/sets/dm-02/Fighter.webp";
+import Fortress from "../images/sets/dm-02/Fortress.webp";
+import Larba from "../images/sets/dm-02/Larba.webp";
+import Logic from "../images/sets/dm-02/Logic.webp";
+import Lost from "../images/sets/dm-02/Lost.webp";
+import Magris from "../images/sets/dm-02/Magris.webp";
+import Ooze from "../images/sets/dm-02/Ooze.webp";
+import Paladin from "../images/sets/dm-02/Paladin.webp";
+import Phal from "../images/sets/dm-02/Phal.webp";
+import Rumble from "../images/sets/dm-02/Rumble.webp";
+import Stained from "../images/sets/dm-02/Stained.webp";
+import Terahorn from "../images/sets/dm-02/Terahorn.webp";
+import Valdios from "../images/sets/dm-02/Valdios.webp";
 
 export const cardDM02 = [
   {

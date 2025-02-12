@@ -24,7 +24,7 @@ const handleNewUser = async (req, res) => {
       return res.status(409).json({ message: "Email already in use" });
     }
 
-    const hashedPwd = await bcrypt.hash(pwd, 10);
+    const hashedPwd = await bcrypt.hash(pwd, 10); //Kolla upp vad 10 faktiskt är
 
     const newUser = new User({
       username: user,

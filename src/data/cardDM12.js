@@ -1,19 +1,19 @@
-import Avatar from "../images/sets/dm-12/Avatar.jpg";
-import Belmol from "../images/sets/dm-12/Belmol.jpg";
-import Cloned from "../images/sets/dm-12/Cloned.jpg";
-import Death from "../images/sets/dm-12/Death.jpg";
-import Delacerna from "../images/sets/dm-12/Delacerna.jpg";
-import Electro from "../images/sets/dm-12/Electro.jpg";
-import Giga from "../images/sets/dm-12/Giga.jpg";
-import Hydrooze from "../images/sets/dm-12/Hydrooze.jpg";
-import Naga from "../images/sets/dm-12/Naga.jpg";
-import Pegasus from "../images/sets/dm-12/Pegasus.jpg";
-import Pharzi from "../images/sets/dm-12/Pharzi.jpg";
-import Sea from "../images/sets/dm-12/Sea.jpg";
-import Spectral from "../images/sets/dm-12/Spectral.jpg";
-import Sprint from "../images/sets/dm-12/Sprint.jpg";
-import Wind from "../images/sets/dm-12/Wind.jpg";
-import Wise from "../images/sets/dm-12/Wise.jpg";
+import Avatar from "../images/sets/dm-12/Avatar.webp";
+import Belmol from "../images/sets/dm-12/Belmol.webp";
+import Cloned from "../images/sets/dm-12/Cloned.webp";
+import Death from "../images/sets/dm-12/Death.webp";
+import Delacerna from "../images/sets/dm-12/Delacerna.webp";
+import Electro from "../images/sets/dm-12/Electro.webp";
+import Giga from "../images/sets/dm-12/Giga.webp";
+import Hydrooze from "../images/sets/dm-12/Hydrooze.webp";
+import Naga from "../images/sets/dm-12/Naga.webp";
+import Pegasus from "../images/sets/dm-12/Pegasus.webp";
+import Pharzi from "../images/sets/dm-12/Pharzi.webp";
+import Sea from "../images/sets/dm-12/Sea.webp";
+import Spectral from "../images/sets/dm-12/Spectral.webp";
+import Sprint from "../images/sets/dm-12/Sprint.webp";
+import Wind from "../images/sets/dm-12/Wind.webp";
+import Wise from "../images/sets/dm-12/Wise.webp";
 
 export const cardDM12 = [
   {

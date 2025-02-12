@@ -1,13 +1,13 @@
-import Paladin from '../images/sets/dm-02/Paladin.jpg';
-import Bynor from '../images/sets/dm-03/Bynor.jpg';
-import Corile from '../images/sets/dm-02/Corile.jpg';
-import Stained from '../images/sets/dm-02/Stained.jpg';
-import Flower from '../images/sets/dm-01/Marine Flower.jpg';
-import Merfolk from '../images/sets/dm-01/Merfolk.jpg';
-import Coral from '../images/sets/dm-01/Coral.jpg';
-import Spiral from '../images/sets/dm-01/Spiral Gate.jpg';
-import Liquid from '../images/sets/dm-03/Liquid.jpg';
-import Shaper from '../images/sets/dm-03/Shaper.jpg';
+import Paladin from '../images/sets/dm-02/Paladin.webp';
+import Bynor from '../images/sets/dm-03/Bynor.webp';
+import Corile from '../images/sets/dm-02/Corile.webp';
+import Stained from '../images/sets/dm-02/Stained.webp';
+import Flower from '../images/sets/dm-01/Marine Flower.webp';
+import Merfolk from '../images/sets/dm-01/Merfolk.webp';
+import Coral from '../images/sets/dm-01/Coral.webp';
+import Spiral from '../images/sets/dm-01/Spiral Gate.webp';
+import Liquid from '../images/sets/dm-03/Liquid.webp';
+import Shaper from '../images/sets/dm-03/Shaper.webp';
 
 
 export const starterWater = [

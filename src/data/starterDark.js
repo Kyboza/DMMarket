@@ -1,13 +1,13 @@
-import Phantasmal from '../images/sets/dm-06/Phantasmal.jpg';
-import Schuka from '../images/sets/dm-06/Schuka.jpg';
-import Gnarvash from '../images/sets/dm-06/Gnarvash.jpg';
-import Lone from '../images/sets/dm-06/Lone.jpg';
-import Gigagriff from '../images/sets/dm-06/Gigagriff.jpg';
-import Ooze from '../images/sets/dm-02/Ooze.jpg';
-import Critical from '../images/sets/dm-02/Critical.jpg';
-import Terror from '../images/sets/dm-01/Terror Pit.jpg';
-import Clamp from '../images/sets/dm-08/Clamp.jpg';
-import Corpse from '../images/sets/dm-08/Corpse.jpg';
+import Phantasmal from '../images/sets/dm-06/Phantasmal.webp';
+import Schuka from '../images/sets/dm-06/Schuka.webp';
+import Gnarvash from '../images/sets/dm-06/Gnarvash.webp';
+import Lone from '../images/sets/dm-06/Lone.webp';
+import Gigagriff from '../images/sets/dm-06/Gigagriff.webp';
+import Ooze from '../images/sets/dm-02/Ooze.webp';
+import Critical from '../images/sets/dm-02/Critical.webp';
+import Terror from '../images/sets/dm-01/Terror Pit.webp';
+import Clamp from '../images/sets/dm-08/Clamp.webp';
+import Corpse from '../images/sets/dm-08/Corpse.webp';
 
 
 export const starterDark = [

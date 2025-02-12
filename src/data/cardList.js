@@ -1,19 +1,19 @@
-import Awe from "../images/sets/dm-01/Holy Awe.jpg";
-import Bolshack from "../images/sets/dm-01/Bolshack.jpg";
-import Coral from "../images/sets/dm-01/Coral.jpg";
-import Flame from "../images/sets/dm-01/Tornado Flame.jpg";
-import Flower from "../images/sets/dm-01/Marine Flower.jpg";
-import Gatling from "../images/sets/dm-01/Gatling.jpg";
-import Hammer from "../images/sets/dm-01/Hammer.jpg";
-import HunterFish from "../images/sets/dm-01/Hunter Fish.jpg";
-import Merfolk from "../images/sets/dm-01/Merfolk.jpg";
-import Mushroom from "../images/sets/dm-01/Mushroom.jpg";
-import Snare from "../images/sets/dm-01/Natural Snare.jpg";
-import Phantom from "../images/sets/dm-01/Phantom.jpg";
-import Scarlet from "../images/sets/dm-01/Scarlet Skyterror Foil.jpg";
-import Spiral from "../images/sets/dm-01/Spiral Gate.jpg";
-import Terror from "../images/sets/dm-01/Terror Pit.jpg";
-import Unicorn from "../images/sets/dm-01/Unicorn Fish.jpg";
+import Awe from "../images/sets/dm-01/Holy Awe.webp";
+import Bolshack from "../images/sets/dm-01/Bolshack.webp";
+import Coral from "../images/sets/dm-01/Coral.webp";
+import Flame from "../images/sets/dm-01/Tornado Flame.webp";
+import Flower from "../images/sets/dm-01/Marine Flower.webp";
+import Gatling from "../images/sets/dm-01/Gatling.webp";
+import Hammer from "../images/sets/dm-01/Hammer.webp";
+import HunterFish from "../images/sets/dm-01/Hunter Fish.webp";
+import Merfolk from "../images/sets/dm-01/Merfolk.webp";
+import Mushroom from "../images/sets/dm-01/Mushroom.webp";
+import Snare from "../images/sets/dm-01/Natural Snare.webp";
+import Phantom from "../images/sets/dm-01/Phantom.webp";
+import Scarlet from "../images/sets/dm-01/Scarlet Skyterror Foil.webp";
+import Spiral from "../images/sets/dm-01/Spiral Gate.webp";
+import Terror from "../images/sets/dm-01/Terror Pit.webp";
+import Unicorn from "../images/sets/dm-01/Unicorn Fish.webp";
 
 export const cardList = [
   {

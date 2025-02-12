@@ -1,5 +1,5 @@
 import React from "react";
-import DMLogo from "../images/logos/Dmmarketlogo1024x1024.png";
+import DMLogo from "../images/logos/Dmmarketlogo1024x1024.webp";
 
 const About = () => {
   return (

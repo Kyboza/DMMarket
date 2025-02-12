@@ -1,19 +1,19 @@
-import Alqedias from "../images/sets/dm-04/Alqedias.jpg";
-import Aquakumai from "../images/sets/dm-04/Aquakumai.jpg";
-import Ballom from "../images/sets/dm-04/Ballom.jpg";
-import Galklife from "../images/sets/dm-04/Galklife.jpg";
-import Hydro from "../images/sets/dm-04/Hydro.jpg";
-import Jolter from "../images/sets/dm-04/Jolter.jpg";
-import Kamikaze from "../images/sets/dm-04/Kamikaze.jpg";
-import Loco from "../images/sets/dm-04/Loco.jpg";
-import Marinomancer from "../images/sets/dm-04/Marinomancer.jpg";
-import Missile from "../images/sets/dm-04/Missile.jpg";
-import Mist from "../images/sets/dm-04/Mist.jpg";
-import Sarius from "../images/sets/dm-04/Sarius.jpg";
-import Soul from "../images/sets/dm-04/Soul.jpg";
-import Sunburst from "../images/sets/dm-04/Sunburst.jpg";
-import Torcon from "../images/sets/dm-04/Torcon.jpg";
-import Whirlwind from "../images/sets/dm-04/Whirlwind.jpg";
+import Alqedias from "../images/sets/dm-04/Alqedias.webp";
+import Aquakumai from "../images/sets/dm-04/Aquakumai.webp";
+import Ballom from "../images/sets/dm-04/Ballom.webp";
+import Galklife from "../images/sets/dm-04/Galklife.webp";
+import Hydro from "../images/sets/dm-04/Hydro.webp";
+import Jolter from "../images/sets/dm-04/Jolter.webp";
+import Kamikaze from "../images/sets/dm-04/Kamikaze.webp";
+import Loco from "../images/sets/dm-04/Loco.webp";
+import Marinomancer from "../images/sets/dm-04/Marinomancer.webp";
+import Missile from "../images/sets/dm-04/Missile.webp";
+import Mist from "../images/sets/dm-04/Mist.webp";
+import Sarius from "../images/sets/dm-04/Sarius.webp";
+import Soul from "../images/sets/dm-04/Soul.webp";
+import Sunburst from "../images/sets/dm-04/Sunburst.webp";
+import Torcon from "../images/sets/dm-04/Torcon.webp";
+import Whirlwind from "../images/sets/dm-04/Whirlwind.webp";
 
 export const cardDM04 = [
   {

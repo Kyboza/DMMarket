@@ -1,13 +1,13 @@
-import Fighter from '../images/sets/dm-02/Fighter.jpg';
-import Fortress from '../images/sets/dm-02/Fortress.jpg';
-import Cryptic from '../images/sets/dm-07/Cryptic.jpg';
-import Spinning from '../images/sets/dm-07/Spinning.jpg';
-import Terahorn from '../images/sets/dm-02/Terahorn.jpg';
-import Mushroom from '../images/sets/dm-01/Mushroom.jpg';
-import Sniper from '../images/sets/dm-03/Sniper.jpg';
-import Stinger from '../images/sets/dm-07/Stinger.jpg';
-import Mana from '../images/sets/dm-03/Mana.jpg';
-import Snare from '../images/sets/dm-01/Natural Snare.jpg';
+import Fighter from '../images/sets/dm-02/Fighter.webp';
+import Fortress from '../images/sets/dm-02/Fortress.webp';
+import Cryptic from '../images/sets/dm-07/Cryptic.webp';
+import Spinning from '../images/sets/dm-07/Spinning.webp';
+import Terahorn from '../images/sets/dm-02/Terahorn.webp';
+import Mushroom from '../images/sets/dm-01/Mushroom.webp';
+import Sniper from '../images/sets/dm-03/Sniper.webp';
+import Stinger from '../images/sets/dm-07/Stinger.webp';
+import Mana from '../images/sets/dm-03/Mana.webp';
+import Snare from '../images/sets/dm-01/Natural Snare.webp';
 
 export const starterNature = [
     {id: 'Fighter', image: Fighter},

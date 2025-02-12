@@ -1,19 +1,19 @@
-import Avalanche from "../images/sets/dm-05/Avalanche.jpg";
-import Billion from "../images/sets/dm-05/Billion.jpg";
-import Blazosaur from "../images/sets/dm-05/Blazosaur.jpg";
-import Bombat from "../images/sets/dm-05/Bombat.jpg";
-import Brutal from "../images/sets/dm-05/Brutal.jpg";
-import Gallia from "../images/sets/dm-05/Gallia.jpg";
-import Gigaling from "../images/sets/dm-05/Gigaling.jpg";
-import Gigazoul from "../images/sets/dm-05/Gigazoul.jpg";
-import Miracle from "../images/sets/dm-05/Miracle.jpg";
-import Rikabu from "../images/sets/dm-05/Rikabu.jpg";
-import Smash from "../images/sets/dm-05/Smash.jpg";
-import Snow from "../images/sets/dm-05/Snow.jpg";
-import Syrius from "../images/sets/dm-05/Syrius.jpg";
-import Syforce from "../images/sets/dm-05/Syforce.jpg";
-import Twin from "../images/sets/dm-05/Twin.jpg";
-import Byle from "../images/sets/dm-05/Byle.jpg";
+import Avalanche from "../images/sets/dm-05/Avalanche.webp";
+import Billion from "../images/sets/dm-05/Billion.webp";
+import Blazosaur from "../images/sets/dm-05/Blazosaur.webp";
+import Bombat from "../images/sets/dm-05/Bombat.webp";
+import Brutal from "../images/sets/dm-05/Brutal.webp";
+import Gallia from "../images/sets/dm-05/Gallia.webp";
+import Gigaling from "../images/sets/dm-05/Gigaling.webp";
+import Gigazoul from "../images/sets/dm-05/Gigazoul.webp";
+import Miracle from "../images/sets/dm-05/Miracle.webp";
+import Rikabu from "../images/sets/dm-05/Rikabu.webp";
+import Smash from "../images/sets/dm-05/Smash.webp";
+import Snow from "../images/sets/dm-05/Snow.webp";
+import Syrius from "../images/sets/dm-05/Syrius.webp";
+import Syforce from "../images/sets/dm-05/Syforce.webp";
+import Twin from "../images/sets/dm-05/Twin.webp";
+import Byle from "../images/sets/dm-05/Byle.webp";
 
 export const cardDM05 = [
   {

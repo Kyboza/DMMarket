@@ -1,19 +1,19 @@
-import Abzo from "../images/sets/dm-08/Abzo.jpg";
-import Bakkra from "../images/sets/dm-08/Bakkra.jpg";
-import Bajula from "../images/sets/dm-08/Bajula.jpg";
-import Clamp from "../images/sets/dm-08/Clamp.jpg";
-import Corpse from "../images/sets/dm-08/Corpse.jpg";
-import Draco from "../images/sets/dm-08/Draco.jpg";
-import Eureka from "../images/sets/dm-08/Eureka.jpg";
-import Giland from "../images/sets/dm-08/Giland.jpg";
-import Jagalzor from "../images/sets/dm-08/Jagalzor.jpg";
-import Kachua from "../images/sets/dm-08/Kachua.jpg";
-import Melgars from "../images/sets/dm-08/Melgars.jpg";
-import Nariel from "../images/sets/dm-08/Nariel.jpg";
-import Quixotic from "../images/sets/dm-08/Quixotic.jpg";
-import Rocket from "../images/sets/dm-08/Rocket.jpg";
-import Sol from "../images/sets/dm-08/Sol.jpg";
-import Volcano from "../images/sets/dm-08/Volcano.jpg";
+import Abzo from "../images/sets/dm-08/Abzo.webp";
+import Bakkra from "../images/sets/dm-08/Bakkra.webp";
+import Bajula from "../images/sets/dm-08/Bajula.webp";
+import Clamp from "../images/sets/dm-08/Clamp.webp";
+import Corpse from "../images/sets/dm-08/Corpse.webp";
+import Draco from "../images/sets/dm-08/Draco.webp";
+import Eureka from "../images/sets/dm-08/Eureka.webp";
+import Giland from "../images/sets/dm-08/Giland.webp";
+import Jagalzor from "../images/sets/dm-08/Jagalzor.webp";
+import Kachua from "../images/sets/dm-08/Kachua.webp";
+import Melgars from "../images/sets/dm-08/Melgars.webp";
+import Nariel from "../images/sets/dm-08/Nariel.webp";
+import Quixotic from "../images/sets/dm-08/Quixotic.webp";
+import Rocket from "../images/sets/dm-08/Rocket.webp";
+import Sol from "../images/sets/dm-08/Sol.webp";
+import Volcano from "../images/sets/dm-08/Volcano.webp";
 
 export const cardDM08 = [
   {

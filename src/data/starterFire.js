@@ -1,13 +1,13 @@
-import Crush from '../images/sets/dm-07/Crush.jpg';
-import Kooc from '../images/sets/dm-07/Kooc.jpg';
-import Naglu from '../images/sets/dm-07/Naglu.jpg';
-import Gazarias from '../images/sets/dm-07/Gazarias.jpg';
-import Valdios from '../images/sets/dm-02/Valdios.jpg';
-import Burst from '../images/sets/dm-02/Burst.jpg';
-import Rumble from '../images/sets/dm-02/Rumble.jpg';
-import Hammer from '../images/sets/dm-01/Hammer.jpg';
-import Bolshack from '../images/sets/dm-01/Bolshack.jpg';
-import Gatling from '../images/sets/dm-01/Gatling.jpg';
+import Crush from '../images/sets/dm-07/Crush.webp';
+import Kooc from '../images/sets/dm-07/Kooc.webp';
+import Naglu from '../images/sets/dm-07/Naglu.webp';
+import Gazarias from '../images/sets/dm-07/Gazarias.webp';
+import Valdios from '../images/sets/dm-02/Valdios.webp';
+import Burst from '../images/sets/dm-02/Burst.webp';
+import Rumble from '../images/sets/dm-02/Rumble.webp';
+import Hammer from '../images/sets/dm-01/Hammer.webp';
+import Bolshack from '../images/sets/dm-01/Bolshack.webp';
+import Gatling from '../images/sets/dm-01/Gatling.webp';
 
 
 

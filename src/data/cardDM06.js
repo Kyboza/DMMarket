@@ -1,19 +1,19 @@
-import Baza from "../images/sets/dm-06/Baza.jpg";
-import Bolmeteus from "../images/sets/dm-06/Bolmeteus.jpg";
-import Cutthroat from "../images/sets/dm-06/Cutthroat.jpg";
-import Gigagriff from "../images/sets/dm-06/Gigagriff.jpg";
-import Gate from "../images/sets/dm-06/Gate.jpg";
-import Gnarvash from "../images/sets/dm-06/Gnarvash.jpg";
-import Innocent from "../images/sets/dm-06/Innocent.jpg";
-import Lone from "../images/sets/dm-06/Lone.jpg";
-import Lupia from "../images/sets/dm-06/Lupia.jpg";
-import Magnus from "../images/sets/dm-06/Magnus.jpg";
-import Phantasmal from "../images/sets/dm-06/Phantasmal.jpg";
-import Rain from "../images/sets/dm-06/Rain.jpg";
-import Schuka from "../images/sets/dm-06/Schuka.jpg";
-import Screwdriver from "../images/sets/dm-06/Screwdriver.jpg";
-import Steam from "../images/sets/dm-06/Steam.jpg";
-import Valk from "../images/sets/dm-06/Valk.jpg";
+import Baza from "../images/sets/dm-06/Baza.webp";
+import Bolmeteus from "../images/sets/dm-06/Bolmeteus.webp";
+import Cutthroat from "../images/sets/dm-06/Cutthroat.webp";
+import Gigagriff from "../images/sets/dm-06/Gigagriff.webp";
+import Gate from "../images/sets/dm-06/Gate.webp";
+import Gnarvash from "../images/sets/dm-06/Gnarvash.webp";
+import Innocent from "../images/sets/dm-06/Innocent.webp";
+import Lone from "../images/sets/dm-06/Lone.webp";
+import Lupia from "../images/sets/dm-06/Lupia.webp";
+import Magnus from "../images/sets/dm-06/Magnus.webp";
+import Phantasmal from "../images/sets/dm-06/Phantasmal.webp";
+import Rain from "../images/sets/dm-06/Rain.webp";
+import Schuka from "../images/sets/dm-06/Schuka.webp";
+import Screwdriver from "../images/sets/dm-06/Screwdriver.webp";
+import Steam from "../images/sets/dm-06/Steam.webp";
+import Valk from "../images/sets/dm-06/Valk.webp";
 
 export const cardDM06 = [
   {
