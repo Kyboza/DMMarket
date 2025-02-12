@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { dragonoidArticle } from '../../data/dragonoidArticle';
 import { beastfolkArticle } from '../../data/beastfolkArticle';
 import { merfolkArticle } from '../../data/merfolkArticle';
-import DMLogo from '../../images/logos/Dmmarketlogo1024x1024.png';
+import DMLogo from '../../images/logos/Dmmarketlogo1024x1024.webp';
 
 const UniqueArticle = () => {
   const { articleId } = useParams();
