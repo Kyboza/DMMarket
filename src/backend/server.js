@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { connectToDB } = require("../lib/mongodb");  // Make sure this path is correct
+const { connectToDB } = require("../lib/mongodb"); 
 const corsOptions = require("./config/corsOptions");
 const verifyJWT = require("./middleware/verifyJWT");
 const credentials = require("./middleware/credentials");
@@ -10,7 +10,6 @@ require("dotenv").config();
 
 const app = express();
 
-// Middleware
 app.use(credentials);
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -18,20 +17,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(logger);
 
-// Connect to MongoDB
 async function connectDatabase() {
   try {
     const dbConnection = await connectToDB();
-    console.log(dbConnection.message);  // Confirm if connected to DB
+    console.log(dbConnection.message);
   } catch (err) {
     console.log("DB Connection failed:", err);
-    process.exit(1);  // Exit if DB connection fails
+    process.exit(1); 
   }
 }
 
 connectDatabase();
 
-// Routes (Example route)
 const router = express.Router();
 router.use("/register", require("./routes/register"));
 router.use("/auth", require("./routes/auth"));
@@ -43,11 +40,8 @@ router.use("/new-password", require("./routes/newPassword"));
 router.use("/create-checkout-session", require("./routes/paymentRedirect"));
 
 
-// Use JWT Authentication middleware on protected routes
 router.use(verifyJWT);
 
-// All routes are prefixed with `/api`
 app.use("/api", router);
 
-// Export the app so it can be used by the serverless function
 module.exports = app;
