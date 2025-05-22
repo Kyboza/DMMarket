@@ -47,3 +47,7 @@
 20250211	15:33:11	717faf33-f8cb-474a-b2c4-c9ec6bc68c39	POST	http://localhost:3000	/auth
 20250211	18:14:22	679d019b-6f0a-4ed9-bc55-914d324d481b	GET	undefined	/api/register
 20250211	18:15:02	d17cb81d-f4be-40d5-a954-92910ad71b23	GET	undefined	/api
+20250522	12:42:59	14302ea6-e059-4f6b-a052-32ecdeb7e558	POST	http://localhost:3000	/create-checkout-session
+20250522	12:44:40	678aa861-26c6-49f0-96e6-7d7167788c58	GET	http://localhost:3000	/api/logout
+20250522	12:45:04	805d4087-95c5-4273-859d-7b71dab8a624	POST	http://localhost:3000	/api/create-checkout-session
+20250522	12:58:44	0dc323fb-c6bc-40c4-982d-b7401dd2a18d	POST	http://localhost:3000	/api/posts
