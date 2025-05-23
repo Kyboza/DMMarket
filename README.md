@@ -16,8 +16,7 @@ DMMARKET är en webbshop för samlarkort från serien Duel Masters.
 
 - Kortinformationen är lagrad i en JSON-fil.
 - Inloggningssystemet använder AccessTokens och RefreshTokens.
-- Användardata lagras i en MongoDB-databas.
-- Även om en SQL-databas hade varit mer optimalt för vissa relationer, fungerar MongoDB bra tack vare möjligheten att koppla samman olika collections.
+- Användardata lagras i en MongoDB-databas, Hade lika gärna kunnat använda en SQL databas för detta syfte.
 - Stripe används som betalningslösning för att hantera känslig information på ett säkert sätt.
 - Verifikationskoder för reset av lösenord skickas genom "nodemailer"
 - Responsivitet för användaren med Swal
